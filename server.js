@@ -40,6 +40,7 @@ app.use(
     origin: [
       "http://localhost:5000",
       "http://localhost:5173",
+      "https://my-store-blond.vercel.app",
     ],
     credentials: true, // if you use cookies / auth headers
   })
