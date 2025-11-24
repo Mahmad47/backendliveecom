@@ -77,7 +77,7 @@ exports.updateUser = async (req, res) => {
     }
 
     if (req.file) {
-      updateFields.avatar = `${process.env.HOST}/uploads/${req.file.filename}`;
+      updateFields.avatar = `/uploads/${req.file.filename}`;
     }
 
     const updated = await User.findByIdAndUpdate(id, updateFields, {

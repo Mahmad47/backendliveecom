@@ -24,7 +24,7 @@ const userSchema = new mongoose.Schema(
     age: { type: Number },
     phone: { type: Number },
     role: { type: String, default: "user" },
-    avatar: { type: String, default: "" },
+    c: { type: String, default: "" },
   },
   { timestamps: true }
 );
