@@ -79,12 +79,12 @@ exports.updateUser = async (req, res) => {
     if (req.file) {
       updateFields.avatar = `/uploads/${req.file.filename}`;
     }
-
+console.log("Update fields:", updateFields);
     const updated = await User.findByIdAndUpdate(id, updateFields, {
       new: true,
       runValidators: true,
     });
-
+console.log("Updated user:", updated);
     if (!updated) {
       return res.status(404).json({ message: "User not found" });
     }
