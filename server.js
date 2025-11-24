@@ -79,7 +79,7 @@ app.use("*", (_, res) =>
 app.use(errorHandler);
 
 // ------------------ Start Server ------------------
-// const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 5000;
 // const HOST = process.env.HOST || `http://localhost:${PORT}`;
 
 app.listen(PORT, () => {
